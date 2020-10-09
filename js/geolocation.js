@@ -11,7 +11,7 @@ function getLocation() {
 function getCurrentPosition_successCB(successCB) {
     latlng = "getCurrentPosition_successCB: " + "Latitude: " + successCB.coords.latitude + "<br>Longitude: " + successCB.coords.longitude;
     console.log(latlng);
-    geocodeHERE(successCB.coords.latitude + ',' + successCB.coords.longitude);
+    //geocodeHERE(successCB.coords.latitude + ',' + successCB.coords.longitude);
 }
 
 function getCurrentPosition_errorCB(errorCB) {
@@ -21,7 +21,7 @@ function getCurrentPosition_errorCB(errorCB) {
 }
 
 async function geocodeHERE(latlng) {
-    geocodeURLString = 'https://revgeocode.search.hereapi.com/v1/revgeocode?apikey=zqXX556h4qRUgZyA-PtL9CgTohrfxmFIwVSugJwou9w&lang=en-US&at=' + latlng
+    geocodeURLString = 'https://revgeocode.search.hereapi.com/v1/revgeocode?apikey=***&lang=en-US&at=' + latlng
     $.ajax({
         url: geocodeURLString,
         type: 'GET',
@@ -33,7 +33,7 @@ async function geocodeHERE(latlng) {
         }
     });
 
-    //let response = await fetch('https://revgeocode.search.hereapi.com/v1/revgeocode?apikey=zqXX556h4qRUgZyA-PtL9CgTohrfxmFIwVSugJwou9w&lang=en-US&at=' + latlng);
+    //let response = await fetch('https://revgeocode.search.hereapi.com/v1/revgeocode?apikey=***&lang=en-US&at=' + latlng);
     //let data = await response.json();
     //return data;
 }
